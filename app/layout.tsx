@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
+import { Header } from "@/components/header";
 
 const fontDisplay = localFont({
   src: "../public/fonts/PPNeueBit-Bold.otf",
@@ -31,12 +32,15 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "bg-background font-sans antialiased",
           fontSans.variable,
           fontDisplay.variable
         )}
       >
-        {children}
+        <main className="relative min-h-screen">
+          <Header/>
+          {children}
+        </main>
       </body>
     </html>
   );

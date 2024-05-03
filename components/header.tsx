@@ -1,11 +1,12 @@
-import { ComingSoon } from "@/components/coming-soon";
-import { siteConfig } from "@/config/site";
+import { Twitter } from "lucide-react";
+import Link from "next/link";
 
-export default function Home() {
-  return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center">
-      <svg
-        className="w-16 sm:w-24 md:w-32"
+export function Header() {
+	return (
+		<>
+			<Link href="/" className="absolute top-4 left-4 z-10">
+				<svg
+        className="w-12"
         viewBox="0 0 77 46"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -56,16 +57,10 @@ export default function Home() {
           strokeWidth={0.5}
         />
       </svg>
-      <h1 className="font-display text-6xl sm:text-7xl md:text-9xl">
-        {siteConfig.title.toLocaleUpperCase()}
-      </h1>
-      <h3 className="text-lg sm:text-xl">
-        {siteConfig.subtitle}
-      </h3>
-
-      <div className="absolute bottom-0 pb-8 w-full flex items-center justify-center animate-pulse">
-        <ComingSoon />      
-      </div>
-    </section>
-  );
+			</Link>
+			<Link href="twitter.com/haroldvarde" target="_blank" className="absolute top-4 right-4 z-10 flex gap-1 hover:text-foreground/75 transition-colors ease-linear">
+				<span>follow us on</span> <Twitter strokeWidth={1.5} />
+			</Link>
+		</>
+	)
 }
