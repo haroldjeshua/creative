@@ -1,11 +1,19 @@
 import { ComingSoon } from "@/components/coming-soon";
+import { BadgeApps, BadgeFrontend, BadgeIcons, BadgeInterface, BadgeSoftware, BadgeWebsites } from "@/components/decors";
 import { siteConfig } from "@/config/site";
 
 export default function Home() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center">
+      <BadgeWebsites className="absolute top-24 left-2 rotate-[2.94deg]" />
+      <BadgeIcons className="absolute top-12 right-8 rotate-[9.96deg]" />
+      <BadgeFrontend className="absolute top-36 right-8 sm:right-12 rotate-[-9.21deg]" />
+      <BadgeApps className="absolute top-44 left-12 sm:left-48 rotate-[7.87deg]" />
+      <BadgeSoftware className="absolute top-44 right-4 sm:right-64" />
+      <BadgeInterface className="absolute top-32 left-4 sm:left-80 rotate-[-6.33deg]" />
+
       <svg
-        className="w-16 sm:w-24 md:w-32"
+        className="w-16"
         viewBox="0 0 77 46"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
