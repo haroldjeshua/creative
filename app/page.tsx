@@ -3,9 +3,9 @@ import { siteConfig } from "@/config/site";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
+    <main className="relative flex min-h-screen flex-col items-center justify-center">
       <svg
-        className="w-16 sm:w-32"
+        className="w-16 sm:w-24 md:w-32"
         viewBox="0 0 77 46"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -56,15 +56,15 @@ export default function Home() {
           strokeWidth={0.5}
         />
       </svg>
-      <h1 className="font-display text-6xl sm:text-9xl">
+      <h1 className="font-display text-6xl sm:text-7xl md:text-9xl">
         {siteConfig.title.toLocaleUpperCase()}
       </h1>
       <h3 className="text-lg sm:text-xl">
         {siteConfig.subtitle}
       </h3>
 
-      <div className="mt-8">
-      <ComingSoon />      
+      <div className="absolute bottom-0 pb-8 w-full flex items-center justify-center animate-pulse">
+        <ComingSoon />      
       </div>
     </main>
   );
