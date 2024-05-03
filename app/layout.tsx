@@ -32,15 +32,16 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "bg-background font-sans antialiased",
+          "relative bg-background font-sans antialiased",
           fontSans.variable,
           fontDisplay.variable
         )}
       >
-        <main className="relative min-h-screen">
-          <Header/>
+        <Header/>
+        <main className="min-h-screen">
           {children}
         </main>
+        <div className="texture pointer-events-none absolute inset-0" />
       </body>
     </html>
   );

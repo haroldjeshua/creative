@@ -71,8 +71,8 @@ export default function Home() {
         {siteConfig.subtitle}
       </h3>
 
-      <div className="absolute bottom-0 pb-8 w-full flex items-center justify-center animate-pulse">
-        <ComingSoon />      
+      <div className="fixed bottom-0 pb-8 w-full flex items-center justify-center animate-pulse">
+        <ComingSoon />
       </div>
     </section>
   );
