@@ -1,6 +1,12 @@
+import { Mail } from "lucide-react";
+
 export default function Page() {
   return (
     <section className="space-y-4">
+      <Mail
+        className="size-24 -rotate-6 sm:size-32 xl:fixed xl:left-4 xl:top-1/3 xl:size-44"
+        strokeWidth={1}
+      />
       <h1 className="font-display text-6xl">Get in Touch</h1>
       <h3>Let&apos;s bring your design vision to life</h3>
       <p>

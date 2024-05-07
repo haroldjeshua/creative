@@ -14,12 +14,12 @@ export default function Page() {
         >
           Harold Varde
         </Link>
-        , a seasoned designer with a lifelong passion for art and design. What
-        started as a small, home-based studio has grown into a renowned
-        independent practice, known for its innovative approach and exceptional
-        craftsmanship. Our team of talented designers brings together diverse
-        backgrounds and perspectives, allowing us to tackle projects from
-        multiple angles and deliver truly unique solutions.
+        , a seasoned software creative with a lifelong passion for art and
+        design. What started as a small, home-based studio has grown into a
+        renowned independent practice, known for its innovative approach and
+        exceptional craftsmanship. Our team of talented designers brings
+        together diverse backgrounds and perspectives, allowing us to tackle
+        projects from multiple angles and deliver truly unique solutions.
       </p>
     </section>
   );
