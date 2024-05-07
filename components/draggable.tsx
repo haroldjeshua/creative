@@ -1,13 +1,14 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import React, { RefObject } from "react";
 import { motion } from "framer-motion";
-import React from "react";
+import { cn } from "@/lib/utils";
 
 interface DraggableProps {
   id: string;
   rotation: number;
   className: string;
+  constraintsRef: RefObject<HTMLDivElement>;
   children: React.ReactNode;
 }
 
@@ -15,18 +16,14 @@ export default function Draggable({
   id,
   rotation,
   className,
+  constraintsRef,
   children,
 }: DraggableProps) {
   return (
     <motion.div
       key={id}
       drag
-      dragConstraints={{
-        top: 0,
-        left: 0,
-        right: 0,
-        bottom: 0,
-      }}
+      dragConstraints={constraintsRef}
       initial={{ rotate: rotation }}
       className={cn("absolute", className)}
     >
