@@ -6,21 +6,56 @@ import {
   BadgeSoftware,
   BadgeWebsites,
 } from "@/components/decors";
-import { Navbar } from "@/components/navbar";
+import Draggable from "@/components/draggable";
 import { siteConfig } from "@/config/site";
 
 export default function Home() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center">
-      <BadgeWebsites className="absolute left-2 top-24 rotate-[2.94deg]" />
-      <BadgeIcons className="absolute right-8 top-12 rotate-[9.96deg]" />
-      <BadgeFrontend className="absolute right-8 top-36 rotate-[-9.21deg] sm:right-12" />
-      <BadgeApps className="absolute left-12 top-44 rotate-[7.87deg] sm:left-48" />
-      <BadgeSoftware className="absolute right-4 top-44 sm:right-64" />
-      <BadgeInterface className="absolute left-4 top-32 rotate-[-6.33deg] sm:left-80" />
+      <Draggable id="badge-websites" rotation={2.94} className="left-2 top-24">
+        <BadgeWebsites />
+      </Draggable>
+      <Draggable id="badge-icons" rotation={9.96} className="right-8 top-12">
+        <BadgeIcons />
+      </Draggable>
+      <Draggable
+        id="badge-frontend"
+        rotation={-9.21}
+        className="right-8 top-36 sm:right-12"
+      >
+        <BadgeFrontend />
+      </Draggable>
+      <Draggable
+        id="badge-apps"
+        rotation={7.87}
+        className="left-12 top-44 sm:left-48"
+      >
+        <BadgeApps />
+      </Draggable>
+      <Draggable
+        id="badge-software"
+        rotation={0}
+        className="right-4 top-44 sm:right-64"
+      >
+        <BadgeSoftware />
+      </Draggable>
+      <Draggable
+        id="badge-interface"
+        rotation={-6.33}
+        className="left-4 top-32 sm:left-80"
+      >
+        <BadgeInterface />
+      </Draggable>
+
+      {/* <BadgeWebsites className="absolute left-2 top-24 rotate-[2.94deg]" /> */}
+      {/* <BadgeIcons className="absolute right-8 top-12 rotate-[9.96deg]" /> */}
+      {/* <BadgeFrontend className="absolute right-8 top/-36 rotate-[-9.21deg] sm:right-12" /> */}
+      {/* <BadgeApps className="absolute left-12 top-44 rotate-[7.87deg] sm:left-48" /> */}
+      {/* <BadgeSoftware className="absolute right-4 top-44 sm:right-64" /> */}
+      {/* <BadgeInterface className="absolute left-4 top-32 rotate-[-6.33deg] sm:left-80" /> */}
 
       <svg
-        className="w-16"
+        className="z-10 w-16"
         viewBox="0 0 77 46"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -71,10 +106,10 @@ export default function Home() {
           strokeWidth={0.5}
         />
       </svg>
-      <h1 className="font-display text-6xl sm:text-7xl md:text-9xl">
+      <h1 className="z-10 font-display text-6xl sm:text-7xl md:text-9xl">
         {siteConfig.title.toLocaleUpperCase()}
       </h1>
-      <h3 className="text-lg sm:text-xl">{siteConfig.subtitle}</h3>
+      <h3 className="z-10 text-lg sm:text-xl">{siteConfig.subtitle}</h3>
     </section>
   );
 }
