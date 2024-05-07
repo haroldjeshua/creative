@@ -5,6 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { Header } from "@/components/header";
+import { Navbar } from "@/components/navbar";
 
 const fontDisplay = localFont({
   src: "../public/fonts/PPNeueBit-Bold.otf",
@@ -34,13 +35,12 @@ export default function RootLayout({
         className={cn(
           "relative bg-background font-sans antialiased",
           fontSans.variable,
-          fontDisplay.variable
+          fontDisplay.variable,
         )}
       >
-        <Header/>
-        <main className="min-h-screen">
-          {children}
-        </main>
+        <Header />
+        <main className="px-4">{children}</main>
+        <Navbar />
         <div className="texture pointer-events-none absolute inset-0" />
       </body>
     </html>

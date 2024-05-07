@@ -1,16 +1,24 @@
 import { ComingSoon } from "@/components/coming-soon";
-import { BadgeApps, BadgeFrontend, BadgeIcons, BadgeInterface, BadgeSoftware, BadgeWebsites } from "@/components/decors";
+import {
+  BadgeApps,
+  BadgeFrontend,
+  BadgeIcons,
+  BadgeInterface,
+  BadgeSoftware,
+  BadgeWebsites,
+} from "@/components/decors";
+import { Navbar } from "@/components/navbar";
 import { siteConfig } from "@/config/site";
 
 export default function Home() {
   return (
     <section className="relative flex min-h-screen flex-col items-center justify-center">
-      <BadgeWebsites className="absolute top-24 left-2 rotate-[2.94deg]" />
-      <BadgeIcons className="absolute top-12 right-8 rotate-[9.96deg]" />
-      <BadgeFrontend className="absolute top-36 right-8 sm:right-12 rotate-[-9.21deg]" />
-      <BadgeApps className="absolute top-44 left-12 sm:left-48 rotate-[7.87deg]" />
-      <BadgeSoftware className="absolute top-44 right-4 sm:right-64" />
-      <BadgeInterface className="absolute top-32 left-4 sm:left-80 rotate-[-6.33deg]" />
+      <BadgeWebsites className="absolute left-2 top-24 rotate-[2.94deg]" />
+      <BadgeIcons className="absolute right-8 top-12 rotate-[9.96deg]" />
+      <BadgeFrontend className="absolute right-8 top-36 rotate-[-9.21deg] sm:right-12" />
+      <BadgeApps className="absolute left-12 top-44 rotate-[7.87deg] sm:left-48" />
+      <BadgeSoftware className="absolute right-4 top-44 sm:right-64" />
+      <BadgeInterface className="absolute left-4 top-32 rotate-[-6.33deg] sm:left-80" />
 
       <svg
         className="w-16"
@@ -67,13 +75,7 @@ export default function Home() {
       <h1 className="font-display text-6xl sm:text-7xl md:text-9xl">
         {siteConfig.title.toLocaleUpperCase()}
       </h1>
-      <h3 className="text-lg sm:text-xl">
-        {siteConfig.subtitle}
-      </h3>
-
-      <div className="fixed bottom-0 pb-8 w-full flex items-center justify-center animate-pulse">
-        <ComingSoon />
-      </div>
+      <h3 className="text-lg sm:text-xl">{siteConfig.subtitle}</h3>
     </section>
   );
 }

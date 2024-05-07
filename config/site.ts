@@ -8,8 +8,8 @@ export const siteConfig = {
   addresS: "Manila, Philippines",
   routes: [
     { name: "Home", href: "/" },
-    { name: "Clients", href: "/clients" },
     { name: "Services", href: "/services" },
+    { name: "Clients", href: "/clients" },
     { name: "Info", href: "/info" },
     { name: "Contact", href: "/contact" },
   ],
