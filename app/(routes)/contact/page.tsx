@@ -1,4 +1,10 @@
 import { Mail } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Let's bring your design vision to life",
+};
 
 export default function Page() {
   return (

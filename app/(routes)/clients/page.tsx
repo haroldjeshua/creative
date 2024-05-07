@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import { UsersRound } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Clients",
+  description: "Trusted by leading brands and businesses",
+};
 
 export default function Page() {
   return (

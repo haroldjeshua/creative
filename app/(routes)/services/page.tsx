@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import { PackageOpen } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description: "Comprehensive services to elevate your brand and business",
+};
 
 export default function Page() {
   return (
