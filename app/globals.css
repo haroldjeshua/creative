@@ -87,3 +87,7 @@
   -webkit-text-stroke-color: var(--foreground);
   color: transparent;
 }
+
+.page-title {
+  view-transition-name: page-title;
+}

@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { Header } from "@/components/header";
 import { Navbar } from "@/components/navbar";
+import { ViewTransitions } from "next-view-transitions";
 
 const fontDisplay = localFont({
   src: "../public/fonts/PPNeueBit-Bold.otf",
@@ -33,19 +34,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={cn(
-          "relative bg-background font-sans antialiased",
-          fontSans.variable,
-          fontDisplay.variable,
-        )}
-      >
-        <Header />
-        <main className="px-4">{children}</main>
-        <Navbar />
-        <div className="texture pointer-events-none absolute inset-0" />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={cn(
+            "relative bg-background font-sans antialiased",
+            fontSans.variable,
+            fontDisplay.variable,
+          )}
+        >
+          <Header />
+          <main className="px-4">{children}</main>
+          <Navbar />
+          <div className="texture pointer-events-none absolute inset-0" />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

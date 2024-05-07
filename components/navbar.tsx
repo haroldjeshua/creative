@@ -8,7 +8,7 @@ import {
   PackageOpenIcon,
   UsersRoundIcon,
 } from "lucide-react";
-import Link from "next/link";
+import { Link } from "next-view-transitions";
 import { usePathname } from "next/navigation";
 import { ComponentType, ReactNode } from "react";
 
@@ -47,7 +47,7 @@ export function Navbar() {
             className={cn(
               "relative flex min-w-16 flex-col gap-4 rounded-lg bg-background p-2 transition-all ease-linear sm:min-w-24 sm:gap-8 sm:p-3",
               isTabActive(route.href)
-                ? "z-10 -translate-y-3 -rotate-6 bg-foreground text-background shadow-lg shadow-foreground hover:bg-foreground/85"
+                ? "z-10 -translate-y-3 -rotate-6 bg-foreground text-background shadow-lg shadow-foreground backdrop-blur hover:bg-foreground/95 supports-[backdrop-filter]:bg-foreground/95"
                 : "bg-background shadow-sm hover:-translate-y-2 hover:rotate-2 hover:bg-background/85",
             )}
           >
