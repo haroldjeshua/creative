@@ -1,5 +1,6 @@
 import { Twitter } from "lucide-react";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 export function Header() {
   return (
@@ -58,13 +59,13 @@ export function Header() {
           />
         </svg>
       </Link>
-      <Link
-        href="twitter.com/haroldvarde"
-        target="_blank"
-        className="absolute right-4 top-5 z-10 flex gap-1 transition-colors ease-linear hover:text-foreground/75"
-      >
-        <span>follow us on</span> <Twitter strokeWidth={1.5} />
-      </Link>
+      <div className="absolute right-4 top-4 z-10">
+        <Button asChild size={"sm"} className="rounded-full">
+          <Link href="https://cal.com/haroldv" target="_blank">
+            Book a call
+          </Link>
+        </Button>
+      </div>
     </>
   );
 }

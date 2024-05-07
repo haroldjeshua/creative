@@ -39,13 +39,13 @@ export function Navbar() {
 
   return (
     <div className="fixed bottom-0 flex w-full  items-center justify-center pb-4">
-      <nav className="mx-auto flex max-w-screen-md gap-1 sm:gap-1">
+      <nav className="mx-auto flex max-w-screen-md gap-1 sm:gap-2">
         {routes.map((route: RouteItem) => (
           <Link
             href={route.href}
             key={route.href}
             className={cn(
-              "relative flex min-w-16 flex-col gap-4 rounded-lg bg-background p-2 transition-colors ease-linear sm:min-w-16 sm:gap-8 sm:p-3",
+              "relative flex min-w-16 flex-col gap-4 rounded-lg bg-background p-2 transition-all ease-linear sm:min-w-24 sm:gap-8 sm:p-3",
               isTabActive(route.href)
                 ? "bg-foreground text-background hover:bg-foreground/85"
                 : "bg-background hover:bg-background/25",
