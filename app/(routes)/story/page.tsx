@@ -1,12 +1,13 @@
+import { ActiveIndicator } from "@/components/active-indicator";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Globe } from "lucide-react";
+import { ArrowUpRight, Globe, Sparkles } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Story",
+  title: "Our Story",
   description: "The story behind our independent design studio",
 };
 
@@ -28,8 +29,11 @@ export default function Page() {
         </p>
 
         <div>
-          From the name itself, we are making <em>creative</em> things for the
-          web, could it be <Badge className="rotate-2">websites</Badge>,{" "}
+          From the name itself, we are making{" "}
+          <em className="inline-flex gap-1">
+            creative things <Sparkles />
+          </em>{" "}
+          for the web, could it be <Badge className="rotate-2">websites</Badge>,{" "}
           <Badge className="rotate-3">web apps</Badge>,{" "}
           <Badge className="-rotate-2">user interfaces</Badge>,{" "}
           <Badge className="rotate-1">product design</Badge> and anything
@@ -38,9 +42,10 @@ export default function Page() {
 
         <p>
           I started building websites 5+ years ago and with the experience I
-          gained through that time, it has been my lifelong dream to start a
-          small side gig to help organizations and business to elevate brands
-          and products for the community.
+          gained through that time, it has been my{" "}
+          <span className="font-light">lifelong dream 🌠</span> to start a small
+          side gig to help organizations and business to elevate brands and
+          products for the community.
         </p>
 
         <p>
@@ -53,9 +58,12 @@ export default function Page() {
 
         <p>
           One of our goal is to bring high-quality products that stand out among
-          others. We want to <em>raise the standards of digital work</em> in my
-          country as we believe software should be beautiful, accessible, and
-          helpful to the community.
+          others. We want to{" "}
+          <em className="border-b border-dotted border-foreground">
+            raise the standards of digital work
+          </em>{" "}
+          in my country as we believe software should be beautiful, accessible,
+          and helpful to the community.
         </p>
 
         <p>
@@ -112,9 +120,7 @@ export default function Page() {
 
         <Button asChild size={"lg"} className="space-x-2 rounded-full">
           <Link href="https://cal.com/haroldv" target="_blank">
-            <span className="flex size-4 items-center justify-center rounded-full bg-green-500">
-              <span className="size-2 animate-pulse rounded-full bg-green-300" />
-            </span>
+            <ActiveIndicator />
             <span>Say Hello</span>
             <ArrowUpRight />
           </Link>

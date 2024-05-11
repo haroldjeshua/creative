@@ -1,6 +1,8 @@
-import { ArrowUpRight, Mail, Mailbox, PhoneCall } from "lucide-react";
-import { Metadata } from "next";
 import Link from "next/link";
+import { Metadata } from "next";
+import { ArrowUpRight, Mail, Mailbox, PhoneCall } from "lucide-react";
+import { ActiveIndicator } from "@/components/active-indicator";
+import MinimalClock from "@/components/minimal-clock";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -10,49 +12,55 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <section className="space-y-4">
-        <Mail
-          className="size-24 -rotate-6 sm:size-32 xl:fixed xl:left-4 xl:top-1/3 xl:size-44"
-          strokeWidth={1}
-        />
-        <h1 className="font-display text-4xl">Get in Touch</h1>
-        <h3>Let&apos;s bring your design vision to life</h3>
+      <section className="space-y-4 rounded-xl border-foreground/10 bg-background/50 p-4 backdrop-blur transition ease-linear hover:border-foreground/60 hover:bg-background/75 supports-[backdrop-filter]:bg-background/50">
+        <h1 className="font-display text-4xl leading-none">
+          Let&apos;s bring your design vision to life
+        </h1>
         <p>
-          We&apos;re excited to discuss your design needs and explore how our
-          expertise can elevate your brand. Whether you&apos;re looking to
-          refresh your brand identity, create a captivating website, or develop
-          eye-catching print materials, our team is ready to collaborate and
-          bring your ideas to life.
+          Discuss your design needs whether you&apos;re looking to refresh your
+          brand identity, create a captivating website, or develop eye-catching
+          print materials, our team is ready to collaborate and bring your ideas
+          to life.
         </p>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           <Link
-            href="https://calc.com/haroldv"
+            href="https://cal.com/haroldv"
             className="flex w-full items-center justify-between gap-4 rounded-xl border border-foreground p-4 transition-colors ease-linear hover:bg-foreground hover:text-background"
           >
-            <span className="flex size-4 items-center justify-center rounded-full bg-green-500">
-              <span className="size-2 animate-pulse rounded-full bg-green-300" />
-            </span>
+            <ActiveIndicator />
             Start a Project <ArrowUpRight />
           </Link>
           <Link
             href="mailto:haroldvarde@gmail.com"
             className="flex w-full items-center justify-between gap-4 rounded-xl border border-foreground p-4 transition-colors ease-linear hover:bg-foreground hover:text-background"
           >
-            Email us <Mailbox />
+            <div className="flex flex-col">
+              <span>Email us</span>
+              <small className="text-muted-foreground">
+                haroldvarde@gmail.com
+              </small>
+            </div>
+            <Mailbox />
           </Link>
           <Link
             href="tel:+639816040613"
             className="flex w-full items-center justify-between gap-4 rounded-xl border border-foreground p-4 transition-colors ease-linear hover:bg-foreground hover:text-background"
           >
-            Call us <PhoneCall />
+            <div className="flex flex-col">
+              <span>Call us</span>
+              <small className="text-muted-foreground">
+                (+63) 981 604 0613
+              </small>
+            </div>
+            <PhoneCall />
           </Link>
         </div>
 
-        <div className="flex h-max w-full flex-col gap-4 rounded-xl bg-gradient-to-r from-zinc-400 to-zinc-300 p-4">
-          <div className="flex gap-2">
+        <div className="flex flex-col gap-2">
+          <div className="flex items-center justify-start gap-2">
             <svg
-              className="mt-2 size-8"
+              className="mt-2 size-8 sm:mt-1"
               viewBox="0 0 100 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -128,10 +136,33 @@ export default function Page() {
                 </linearGradient>
               </defs>
             </svg>
-            <span className="font-display text-4xl">HARV CREATIVE</span>
+            <span className="font-display text-4xl leading-none">
+              HARV CREATIVE
+            </span>
           </div>
 
-          <small>Manila / Bicol, Philippines</small>
+          <div className="space-x-2 text-sm">
+            <Link
+              href="https://twitter.com/haroldvarde"
+              target="_blank"
+              className="border-b border-muted-foreground transition-colors hover:text-foreground/60"
+              title="https://twitter.com/haroldvarde"
+            >
+              Twitter
+            </Link>
+            <Link
+              href="https://layers.to/harv"
+              target="_blank"
+              className="border-b border-muted-foreground transition-colors hover:text-foreground/60"
+              title="https://layers.to/harv"
+            >
+              Layers
+            </Link>
+          </div>
+
+          <div className="inline-flex gap-1 text-sm">
+            <span>Manila / Bicol, Philippines ·</span> <MinimalClock />
+          </div>
 
           <small>
             &copy; 2024 · Crafting things for the web with love and kindness.
