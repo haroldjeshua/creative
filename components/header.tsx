@@ -1,4 +1,4 @@
-import { Twitter } from "lucide-react";
+import { CalendarFold, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
@@ -62,7 +62,7 @@ export function Header() {
       <div className="fixed right-4 top-4 z-10">
         <Button asChild size={"sm"} className="rounded-full">
           <Link href="https://cal.com/haroldv" target="_blank">
-            Book a call
+            Book a call <CalendarFold className="ml-2 size-4" />
           </Link>
         </Button>
       </div>

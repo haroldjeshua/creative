@@ -22,31 +22,11 @@ type StringArray = Array<string> & {
   ): U[];
 };
 
-export interface ClientServiceProps {
-  title: string;
-  pricing?: number;
-  description: string;
-  features: string[];
-}
-
 export interface MainServiceProps {
   title: string;
   list: string[];
   icon: React.ReactNode;
 }
-
-export const clientService: ClientServiceProps[] = [
-  {
-    title: "Landing Page",
-    description:
-      "a single page designed to convert traffic into desired actions, ultimately boosting conversions and maximizing results",
-    features: [
-      "design",
-      "no-code development / low-code development / web development",
-      "2-3 weeks",
-    ],
-  },
-];
 
 export const mainServices: MainServiceProps[] = [
   {
@@ -94,11 +74,15 @@ export default function Page() {
         <h1 className="font-display text-4xl">Services</h1>
         <h2 className="text-balance">
           We offer full services from design to development, to help you with
-          everything you need to take your business from 0 -&gt; 1.
+          everything you need to take your business from 0 -&gt; 1
         </h2>
-        <Button asChild size={"lg"} className="rounded-full">
+        <Button asChild size={"lg"} className="space-x-2 rounded-full">
           <Link href="https://cal.com/haroldv" target="_blank">
-            Start a project <ArrowUpRight />
+            <span className="flex size-4 items-center justify-center rounded-full bg-green-500">
+              <span className="size-2 animate-pulse rounded-full bg-green-300" />
+            </span>
+            <span>Start a project</span>
+            <ArrowUpRight />
           </Link>
         </Button>
       </section>

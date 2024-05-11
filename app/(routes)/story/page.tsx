@@ -1,10 +1,12 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Globe } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Info",
+  title: "Story",
   description: "The story behind our independent design studio",
 };
 
@@ -12,6 +14,11 @@ export default function Page() {
   return (
     <>
       <section className="space-y-4">
+        <Avatar>
+          <AvatarImage src="https://github.com/haroldjeshua.png" />
+          <AvatarFallback>HV</AvatarFallback>
+        </Avatar>
+
         <p>Hey, Harold here.</p>
 
         <p>
@@ -20,12 +27,14 @@ export default function Page() {
           .
         </p>
 
-        <p>
+        <div>
           From the name itself, we are making <em>creative</em> things for the
-          web, could it be websites, web apps, user interfaces, product design
-          and anything pixel-related, to push more creative boundaries within
-          the industry.
-        </p>
+          web, could it be <Badge className="rotate-2">websites</Badge>,{" "}
+          <Badge className="rotate-3">web apps</Badge>,{" "}
+          <Badge className="-rotate-2">user interfaces</Badge>,{" "}
+          <Badge className="rotate-1">product design</Badge> and anything
+          pixel-related, to push more creative boundaries within the industry.
+        </div>
 
         <p>
           I started building websites 5+ years ago and with the experience I
@@ -35,22 +44,28 @@ export default function Page() {
         </p>
 
         <p>
-          I&apos;ve been working between digital design and software engineering
+          I&apos;ve been working between{" "}
+          <span className="font-light uppercase">digital design</span> and{" "}
+          <span className="font-display text-xl">software engineering </span>
           to carefully curate things between different disciplines that way we
           can craft exceptional projects that exceed people&apos;s expectations.
         </p>
 
         <p>
           One of our goal is to bring high-quality products that stand out among
-          others. We want to raise the standards of digital work in my country
-          as we believe software should be beautiful, accessible, and helpful to
-          the community.
+          others. We want to <em>raise the standards of digital work</em> in my
+          country as we believe software should be beautiful, accessible, and
+          helpful to the community.
         </p>
 
         <p>
           We design and build with thought, attention to details and care for
           the business. Every projects and products that we launch is made
-          specially for you by a senior-level creative.
+          specially for you by a{" "}
+          <span className="border-b border-dashed border-foreground">
+            senior-level creative
+          </span>
+          .
         </p>
 
         <p>
@@ -86,15 +101,22 @@ export default function Page() {
             <animate attributeName="stroke-width" from="0" to="4" dur="4s" />
           </path>
         </svg>
+
+        <p>Harold Varde</p>
+        <small className="text-muted-foreground">Designer & Developer</small>
       </section>
       <section className="mt-32 flex h-64 w-full flex-col items-center justify-center gap-8 rounded-xl">
-        <h1 className="font-display text-xl sm:text-8xl">
+        <h1 className="font-display text-4xl sm:text-8xl">
           Ready to start a project?
         </h1>
 
-        <Button asChild size={"lg"} className="rounded-full">
+        <Button asChild size={"lg"} className="space-x-2 rounded-full">
           <Link href="https://cal.com/haroldv" target="_blank">
-            Say Hello <ArrowUpRight />
+            <span className="flex size-4 items-center justify-center rounded-full bg-green-500">
+              <span className="size-2 animate-pulse rounded-full bg-green-300" />
+            </span>
+            <span>Say Hello</span>
+            <ArrowUpRight />
           </Link>
         </Button>
       </section>
