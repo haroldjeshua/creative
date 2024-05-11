@@ -6,7 +6,7 @@ export default function RoutesLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mx-auto flex min-h-screen max-w-screen-md items-start justify-center pb-36 pt-16">
+    <div className="mx-auto flex min-h-screen max-w-screen-md flex-col items-start justify-center pb-36 pt-16">
       {children}
     </div>
   );

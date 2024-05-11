@@ -2,10 +2,13 @@
 
 import { cn } from "@/lib/utils";
 import {
+  BadgeDollarSignIcon,
+  BriefcaseBusinessIcon,
   HomeIcon,
   InfoIcon,
   MailIcon,
   PackageOpenIcon,
+  ScrollTextIcon,
   UsersRoundIcon,
 } from "lucide-react";
 import { Link } from "next-view-transitions";
@@ -15,14 +18,18 @@ import { ComponentType, ReactNode } from "react";
 export interface RouteItem {
   name: string;
   href: string;
+  isActive?: boolean;
   icon: ComponentType;
 }
 
 export const routes: RouteItem[] = [
   { name: "Home", href: "/", icon: HomeIcon },
   { name: "Services", href: "/services", icon: PackageOpenIcon },
-  { name: "Clients", href: "/clients", icon: UsersRoundIcon },
+  // { name: "Work", href: "/work", icon: BriefcaseBusinessIcon, isActive: false },
+  // { name: "Clients", href: "/clients", icon: UsersRoundIcon, isActive: false },
+  // { name: "Pricing", href: "/pricing", icon: BadgeDollarSignIcon, isActive: false },
   { name: "Info", href: "/info", icon: InfoIcon },
+  { name: "Story", href: "/story", icon: ScrollTextIcon },
   { name: "Contact", href: "/contact", icon: MailIcon },
 ];
 
@@ -48,7 +55,7 @@ export function Navbar() {
               "relative flex min-w-16 flex-col gap-4 rounded-lg bg-background p-2 transition-all ease-linear sm:min-w-24 sm:gap-8 sm:p-3",
               isTabActive(route.href)
                 ? "z-10 -translate-y-3 -rotate-6 bg-foreground text-background shadow-lg shadow-foreground backdrop-blur hover:bg-foreground/95 supports-[backdrop-filter]:bg-foreground/95"
-                : "bg-background shadow-sm hover:-translate-y-1 hover:bg-background/85",
+                : "border border-foreground/25 bg-background shadow-sm hover:-translate-y-1 hover:bg-background/85",
             )}
           >
             <span>

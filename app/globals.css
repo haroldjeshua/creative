@@ -91,3 +91,11 @@
 .page-title {
   view-transition-name: page-title;
 }
+
+.lucide {
+  stroke-width: 2px;
+}
+
+.lucide * {
+  vector-effect: non-scaling-stroke;
+}

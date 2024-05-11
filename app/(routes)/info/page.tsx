@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+import { Mail } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
 
@@ -86,10 +88,12 @@ export default function Page() {
           </linearGradient>
         </defs>
       </svg>
-      <h1 className="font-display text-6xl">About Us</h1>
-      <h3>The story behind our independent design studio</h3>
+      <h1 className="font-display text-xl sm:text-6xl">
+        Welcome to Harv Creative
+      </h1>
       <p>
-        Harv Creative was founded in 2024 by{" "}
+        Harv Creative is a studio-less independent design studio practice
+        founded in 2024 by{" "}
         <Link
           href="https://harvio.vercel.app"
           target="_blank"
@@ -98,12 +102,32 @@ export default function Page() {
           Harold Varde
         </Link>
         , a seasoned software creative with a lifelong passion for art and
-        design. What started as a small, home-based studio has grown into a
-        renowned independent practice, known for its innovative approach and
-        exceptional craftsmanship. Our team of talented designers brings
-        together diverse backgrounds and perspectives, allowing us to tackle
-        projects from multiple angles and deliver truly unique solutions.
+        design with over 5 years of experience in crafting digital products.
       </p>
+
+      <p>
+        What started as a small, home-based studio has grown into a renowned
+        independent practice, known for its innovative approach and exceptional
+        craftsmanship. Our team of talented designers brings together diverse
+        backgrounds and perspectives, allowing us to tackle projects from
+        multiple angles and deliver truly unique solutions.
+      </p>
+
+      <p>
+        We partner with worldwide businesses, working remotely in the
+        Philippines.
+      </p>
+
+      <div className="space-x-4">
+        <Button asChild>
+          <Link href="mailto:haroldvarde@gmail.com" target="_blank">
+            Say Hello <Mail className="ml-2 size-2 sm:size-4" />
+          </Link>
+        </Button>
+        <Button asChild variant={"secondary"}>
+          <Link href="/story">Our Story --&gt;</Link>
+        </Button>
+      </div>
     </section>
   );
 }

@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 export function Header() {
   return (
     <>
-      <Link href="/" className="absolute left-4 top-4 z-10">
+      <Link href="/" className="fixed left-4 top-4 z-10">
         <svg
           className="w-12"
           viewBox="0 0 77 46"
@@ -59,7 +59,7 @@ export function Header() {
           />
         </svg>
       </Link>
-      <div className="absolute right-4 top-4 z-10">
+      <div className="fixed right-4 top-4 z-10">
         <Button asChild size={"sm"} className="rounded-full">
           <Link href="https://cal.com/haroldv" target="_blank">
             Book a call
