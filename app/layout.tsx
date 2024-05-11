@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import localFont from "next/font/local";
@@ -47,6 +48,7 @@ export default function RootLayout({
           <main className="px-4">{children}</main>
           <Navbar />
           <div className="texture pointer-events-none absolute inset-0" />
+          <Analytics />
         </body>
       </html>
     </ViewTransitions>

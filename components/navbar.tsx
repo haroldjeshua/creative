@@ -48,7 +48,7 @@ export function Navbar() {
               "relative flex min-w-16 flex-col gap-4 rounded-lg bg-background p-2 transition-all ease-linear sm:min-w-24 sm:gap-8 sm:p-3",
               isTabActive(route.href)
                 ? "z-10 -translate-y-3 -rotate-6 bg-foreground text-background shadow-lg shadow-foreground backdrop-blur hover:bg-foreground/95 supports-[backdrop-filter]:bg-foreground/95"
-                : "bg-background shadow-sm hover:-translate-y-2 hover:rotate-2 hover:bg-background/85",
+                : "bg-background shadow-sm hover:-translate-y-1 hover:bg-background/85",
             )}
           >
             <span>
