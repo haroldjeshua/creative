@@ -69,7 +69,7 @@ export default function Page() {
     <>
       <section className="mx-auto max-w-screen-xs space-y-4 text-center">
         <PackageOpen className="hidden size-12 -rotate-12 sm:size-24 md:fixed md:left-4 md:top-1/3 md:block md:size-44" />
-        <h1 className="font-display text-4xl">Services</h1>
+        <h1 className="font-display text-4xl">What we do</h1>
         <h2 className="text-balance">
           We offer full services from design to development, to help you with
           everything you need to take your business from 0 -&gt; 1

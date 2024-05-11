@@ -63,7 +63,7 @@ export function Header() {
         <Button
           asChild
           size={"sm"}
-          className="rounded-full bg-gradient-to-br from-primary to-zinc-600"
+          className="rounded-full bg-gradient-to-br from-primary to-zinc-600 hover:bg-gradient-to-br hover:from-primary/90 hover:to-primary/60"
         >
           <Link href="https://cal.com/haroldv" target="_blank">
             Book a call <CalendarFold className="ml-2 size-4" />

@@ -1,5 +1,14 @@
+import { ComingSoon } from "@/components/coming-soon";
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
+import {
+  HeartHandshake,
+  Mail,
+  Rocket,
+  SatelliteDish,
+  SearchCheck,
+  Sparkle,
+  Telescope,
+} from "lucide-react";
 import { Metadata } from "next";
 import { Link } from "next-view-transitions";
 
@@ -7,6 +16,50 @@ export const metadata: Metadata = {
   title: "Info",
   description: "About us and how we are founded",
 };
+
+interface WorkValuesProps {
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+}
+
+const workValues: WorkValuesProps[] = [
+  {
+    title: "Expansive Thinking",
+    description:
+      "Transcending boundaries and exploring ideas beyond conventional limits.",
+    icon: <Rocket className="size-8" />,
+  },
+  {
+    title: "Borderless Workflow",
+    description:
+      "Embracing the freedom of remote collaboration and asynchronous communication.",
+    icon: <SatelliteDish className="size-8" />,
+  },
+  {
+    title: "Synergistic Co-creation",
+    description:
+      "Fostering a collaborative environment where clients actively contribute their expertise.",
+    icon: <HeartHandshake className="size-8" />,
+  },
+  {
+    title: "Farsighted Vision",
+    description: "Crafting solutions with a long-term, future-focused mindset.",
+    icon: <Telescope className="size-8" />,
+  },
+  {
+    title: "Impactful Minimalism",
+    description:
+      "Embracing simplicity to achieve maximum impact with minimal effort.",
+    icon: <Sparkle className="size-8" />,
+  },
+  {
+    title: "Inquisitive Exploration",
+    description:
+      "Driven by a relentless pursuit of knowledge and a culture of curiosity.",
+    icon: <SearchCheck className="size-8" />,
+  },
+];
 
 export default function Page() {
   return (
@@ -128,15 +181,31 @@ export default function Page() {
           </Button>
         </div>
       </section>
-      <section className="mt-8 hidden space-x-8">
-        <h2 className="font-display text-4xl">How we work</h2>
+      <section className="mt-32 space-y-4">
+        <h2 className="font-display text-3xl">How we work</h2>
 
-        <div className="grid w-full grid-cols-1 sm:grid-cols-4">
-          <div>
-            <h3>features 1</h3>
-            <p>description</p>
-          </div>
+        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-3">
+          {workValues.map((workValue) => (
+            <div
+              key={workValue.title}
+              className="flex w-full flex-col items-start justify-start gap-4 rounded-xl border border-foreground p-4 transition-colors ease-linear hover:bg-gradient-to-br hover:from-foreground hover:to-zinc-700 hover:text-background"
+            >
+              <span>{workValue.icon}</span>
+              <h3>{workValue.title}</h3>
+              <p className="text-xs sm:text-sm">{workValue.description}</p>
+            </div>
+          ))}
         </div>
+      </section>
+      <section className="mt-32 space-y-4">
+        <h2 className="font-display text-3xl">Our design process</h2>
+
+        <ComingSoon />
+      </section>
+      <section className="mt-32 space-y-4">
+        <h2 className="font-display text-3xl">FAQs</h2>
+
+        <ComingSoon />
       </section>
     </>
   );

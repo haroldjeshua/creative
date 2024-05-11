@@ -17,10 +17,10 @@ export default function Page() {
           Let&apos;s bring your design vision to life
         </h1>
         <p>
-          Discuss your design needs whether you&apos;re looking to refresh your
-          brand identity, create a captivating website, or develop eye-catching
-          print materials, our team is ready to collaborate and bring your ideas
-          to life.
+          Discuss with us your design needs whether you&apos;re looking to
+          refresh your brand identity, create a captivating website, or develop
+          eye-catching print materials, our team is ready to collaborate and
+          bring your ideas to life.
         </p>
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
