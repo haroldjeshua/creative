@@ -23,7 +23,7 @@ export default function Page() {
         <p>Hey, Harold here.</p>
 
         <p>
-          I&apos;m the one behind{" "}
+          I&apos;m the man behind{" "}
           <span className="font-display text-2xl uppercase">Harv Creative</span>
           .
         </p>
@@ -44,9 +44,9 @@ export default function Page() {
         <p>
           I started building websites 5+ years ago and with the experience I
           gained through that time, it has been my{" "}
-          <span className="font-light">lifelong dream 🌠</span> to start a small
-          side gig to help organizations and business to elevate brands and
-          products for the community.
+          <span className="font-light italic">lifelong dream 🌠</span> to start
+          a small side gig to help organizations and business to elevate brands
+          and products for the community.
         </p>
 
         <p>

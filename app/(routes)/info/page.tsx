@@ -145,7 +145,7 @@ export default function Page() {
         <h1 className="font-display text-4xl">Hello world, what are we?</h1>
         <p>
           Harv Creative is a studio-less independent design studio practice
-          founded in 2024 by{" "}
+          started in 2024 by{" "}
           <Link
             href="https://harvio.vercel.app"
             target="_blank"
@@ -154,7 +154,7 @@ export default function Page() {
             Harold Varde
           </Link>
           , a seasoned software creative with a lifelong passion for art and
-          design with over 5 years of experience in crafting digital products.
+          design.
         </p>
 
         <p>

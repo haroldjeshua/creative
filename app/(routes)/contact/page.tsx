@@ -61,7 +61,7 @@ export default function Page() {
         <div className="flex flex-col gap-2">
           <div className="flex items-center justify-start gap-2">
             <svg
-              className="mt-2 size-8 sm:mt-1"
+              className="mt-1 size-8 sm:mt-[2px]"
               viewBox="0 0 100 100"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
