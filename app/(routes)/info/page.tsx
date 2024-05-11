@@ -89,7 +89,7 @@ export default function Page() {
             </linearGradient>
           </defs>
         </svg>
-        <h1 className="font-display text-4xl">Hello World</h1>
+        <h1 className="font-display text-4xl">Hello world, what are we?</h1>
         <p>
           Harv Creative is a studio-less independent design studio practice
           founded in 2024 by{" "}

@@ -29,11 +29,12 @@ export default function Page() {
         </p>
 
         <div>
-          From the name itself, we are making{" "}
+          From the name itself, we are crafting{" "}
           <em className="inline-flex gap-1">
-            creative things <Sparkles />
+            creative digital experiences <Sparkles />
           </em>{" "}
-          for the web, could it be <Badge className="rotate-2">websites</Badge>,{" "}
+          for the web, whether it be{" "}
+          <Badge className="rotate-2">websites</Badge>,{" "}
           <Badge className="rotate-3">web apps</Badge>,{" "}
           <Badge className="-rotate-2">user interfaces</Badge>,{" "}
           <Badge className="rotate-1">product design</Badge> and anything

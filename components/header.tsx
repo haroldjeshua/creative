@@ -60,7 +60,11 @@ export function Header() {
         </svg>
       </Link>
       <div className="fixed right-4 top-4 z-10">
-        <Button asChild size={"sm"} className="rounded-full">
+        <Button
+          asChild
+          size={"sm"}
+          className="rounded-full bg-gradient-to-br from-primary to-zinc-600"
+        >
           <Link href="https://cal.com/haroldv" target="_blank">
             Book a call <CalendarFold className="ml-2 size-4" />
           </Link>

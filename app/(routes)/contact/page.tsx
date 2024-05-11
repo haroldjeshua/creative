@@ -26,14 +26,15 @@ export default function Page() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           <Link
             href="https://cal.com/haroldv"
-            className="flex w-full items-center justify-between gap-4 rounded-xl border border-foreground p-4 transition-colors ease-linear hover:bg-foreground hover:text-background"
+            target="_blank"
+            className="flex w-full items-center justify-between gap-4 rounded-xl border border-foreground p-4 transition-colors ease-linear hover:bg-gradient-to-br hover:from-foreground hover:to-zinc-700 hover:text-background"
           >
             <ActiveIndicator />
             Start a Project <ArrowUpRight />
           </Link>
           <Link
             href="mailto:haroldvarde@gmail.com"
-            className="flex w-full items-center justify-between gap-4 rounded-xl border border-foreground p-4 transition-colors ease-linear hover:bg-foreground hover:text-background"
+            className="flex w-full items-center justify-between gap-4 rounded-xl border border-foreground p-4 transition-colors ease-linear hover:bg-gradient-to-br hover:from-foreground hover:to-zinc-700 hover:text-background"
           >
             <div className="flex flex-col">
               <span>Email us</span>
@@ -45,7 +46,7 @@ export default function Page() {
           </Link>
           <Link
             href="tel:+639816040613"
-            className="flex w-full items-center justify-between gap-4 rounded-xl border border-foreground p-4 transition-colors ease-linear hover:bg-foreground hover:text-background"
+            className="flex w-full items-center justify-between gap-4 rounded-xl border border-foreground p-4 transition-colors ease-linear hover:bg-gradient-to-br hover:from-foreground hover:to-zinc-700 hover:text-background"
           >
             <div className="flex flex-col">
               <span>Call us</span>
