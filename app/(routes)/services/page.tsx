@@ -22,13 +22,13 @@ type StringArray = Array<string> & {
   ): U[];
 };
 
-export interface MainServiceProps {
+interface MainServiceProps {
   title: string;
   list: string[];
   icon: React.ReactNode;
 }
 
-export const mainServices: MainServiceProps[] = [
+const mainServices: MainServiceProps[] = [
   {
     title: "Brand Design",
     list: [
