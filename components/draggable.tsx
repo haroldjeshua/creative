@@ -25,7 +25,8 @@ export default function Draggable({
       drag
       dragConstraints={constraintsRef}
       initial={{ rotate: rotation }}
-      className={cn("absolute", className)}
+      className={cn("absolute cursor-grab", className)}
+      whileDrag={{ cursor: "grabbing" }}
     >
       {children}
     </motion.div>

@@ -4,10 +4,15 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import {
   BadgeApps,
+  BadgeBranding,
+  BadgeConsulting,
+  BadgeDesignSystem,
   BadgeFrontend,
   BadgeIcons,
   BadgeInterface,
+  BadgeLandingPages,
   BadgeSoftware,
+  BadgeVisualIdentity,
   BadgeWebsites,
 } from "@/components/decors";
 import Draggable from "@/components/draggable";
@@ -68,6 +73,46 @@ export default function Home() {
         constraintsRef={constraintsRef}
       >
         <BadgeInterface />
+      </Draggable>
+      <Draggable
+        id="badge-branding"
+        rotation={3.14}
+        className="bottom-32 left-2 sm:left-12"
+        constraintsRef={constraintsRef}
+      >
+        <BadgeBranding />
+      </Draggable>
+      <Draggable
+        id="badge-ds"
+        rotation={12.34}
+        className="bottom-44 left-24 sm:left-44"
+        constraintsRef={constraintsRef}
+      >
+        <BadgeDesignSystem />
+      </Draggable>
+      <Draggable
+        id="badge-lp"
+        rotation={-4.2}
+        className="bottom-56 left-16 sm:bottom-44 sm:left-[45%]"
+        constraintsRef={constraintsRef}
+      >
+        <BadgeLandingPages />
+      </Draggable>
+      <Draggable
+        id="badge-vi"
+        rotation={-6.9}
+        className="bottom-32 right-32"
+        constraintsRef={constraintsRef}
+      >
+        <BadgeVisualIdentity />
+      </Draggable>
+      <Draggable
+        id="badge-consulting"
+        rotation={-1.6}
+        className="bottom-24 right-6 sm:bottom-16 sm:right-16"
+        constraintsRef={constraintsRef}
+      >
+        <BadgeConsulting />
       </Draggable>
 
       <h1 className="z-10 font-display text-6xl sm:text-7xl md:text-9xl">
