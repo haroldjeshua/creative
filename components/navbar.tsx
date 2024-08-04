@@ -34,6 +34,7 @@ export const routes: RouteItem[] = [
 ];
 
 export function Navbar() {
+  const navWidth = "400px";
   const pathname = usePathname();
 
   const isTabActive = (tabHref: string) => {
@@ -45,14 +46,17 @@ export function Navbar() {
   };
 
   return (
-    <div className="fixed bottom-0 flex w-full  items-center justify-center pb-4">
-      <nav className="mx-auto flex max-w-screen-md gap-1 sm:gap-2">
+    <div
+      className="fixed bottom-0 flex items-center justify-center pb-4"
+      style={{ width: navWidth, left: "calc(50% - " + navWidth + "/2)" }}
+    >
+      <nav className="mx-auto flex max-w-screen-xs gap-1 sm:gap-2">
         {routes.map((route: RouteItem) => (
           <Link
             href={route.href}
             key={route.href}
             className={cn(
-              "relative flex min-w-16 flex-col gap-4 rounded-lg bg-background p-2 transition-all ease-linear sm:min-w-24 sm:gap-8 sm:p-3",
+              "relative flex min-w-16 flex-col gap-4 rounded-lg bg-background p-2 transition-all ease-linear",
               isTabActive(route.href)
                 ? "z-10 -translate-y-3 -rotate-6 bg-foreground text-background shadow-lg shadow-foreground backdrop-blur hover:bg-foreground/95 supports-[backdrop-filter]:bg-foreground/95"
                 : "border border-foreground/25 bg-background shadow-sm hover:-translate-y-1 hover:bg-background/85",
@@ -61,13 +65,11 @@ export function Navbar() {
             <span>
               <route.icon />
             </span>
-            <span className="text-xs sm:text-sm md:text-base">
-              {route.name}
-            </span>
+            <span className="text-xs sm:text-sm">{route.name}</span>
             {isTabActive(route.href) && (
               <span
                 className={cn(
-                  "absolute bottom-[5px] h-[2px] w-2 rounded-sm bg-background sm:bottom-2 sm:h-1 sm:w-4",
+                  "absolute bottom-[5px] h-[2px] w-2 rounded-sm bg-background",
                 )}
               />
             )}

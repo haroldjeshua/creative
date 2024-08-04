@@ -1,6 +1,14 @@
-import { CalendarFold, Twitter } from "lucide-react";
+import { CalendarFold, Mail, Send, Twitter } from "lucide-react";
 import Link from "next/link";
 import { Button } from "./ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
 
 export function Header() {
   return (
@@ -60,15 +68,42 @@ export function Header() {
         </svg>
       </Link>
       <div className="fixed right-4 top-4 z-10">
-        <Button
-          asChild
-          size={"sm"}
-          className="rounded-full bg-gradient-to-br from-primary to-zinc-600 hover:bg-gradient-to-br hover:from-primary/90 hover:to-primary/60"
-        >
-          <Link href="https://cal.com/haroldv" target="_blank">
-            Book a call <CalendarFold className="ml-2 size-4" />
-          </Link>
-        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              size={"sm"}
+              className="gap-2 rounded-full bg-gradient-to-br from-primary to-zinc-700 px-4 hover:bg-gradient-to-br hover:from-primary/90 hover:to-primary/60"
+            >
+              {/* <Link href="https://cal.com/haroldv" target="_blank">
+                Book a call <CalendarFold className="ml-2 size-4" />
+              </Link> */}
+              <span>Get in touch</span>
+              <Send className="size-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="bg-gradient-to-br from-primary to-zinc-700 text-background">
+            <DropdownMenuItem>
+              <Link
+                href="mailto:haroldvarde@gmail.com"
+                target="_blank"
+                className="flex w-full items-center gap-2"
+              >
+                <span>Email us</span>
+                <Mail className="ml-auto size-4" />
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link
+                href="https://cal.com/haroldv"
+                target="_blank"
+                className="flex w-full items-center gap-2"
+              >
+                <span>Book a call</span>
+                <CalendarFold className="ml-auto size-4" />
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </div>
     </>
   );
