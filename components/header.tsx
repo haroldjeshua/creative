@@ -13,7 +13,10 @@ import {
 export function Header() {
   return (
     <>
-      <Link href="/" className="fixed left-4 top-4 z-10">
+      <Link
+        href="/"
+        className="fixed left-4 top-4 z-10 text-background text-opacity-100 mix-blend-difference"
+      >
         <svg
           className="w-12"
           viewBox="0 0 77 46"
